@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  background-color: var(--Cream);
+  font-family: "Montserrat", "Fraunces", sans-serif;
+  color: var(--Darkgrayishblue);
+  opacity: 0.9;
+  padding: 20px 10px;
+}
+
+.main {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 7% auto;
+}
+
+.image {
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-div {
+  padding: 25px 12.5px;
+}
+
+.product-type {
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-shadow: 0.3px 0.3px var(--Darkgrayishblue);
+}
+
+.product-title {
+  color: var(--Verydarkblue);
+  opacity: 1;
+}
+
+.product-description,
+.former-price,
+button {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.price-tag {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.current-price {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Darkcyan);
+  font-family: "Montserrat";
+  font-style: oblique;
+}
+
+button {
+  background-color: var(--Darkcyan);
+  border: 0;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.desktop-image {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 0;
+  }
+
+  .main {
+    flex-direction: row;
+    max-width: 600px;
+  }
+
+  .image-div {
+    max-width: 51%;
+  }
+
+  .product-div {
+    max-width: 49%;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*
+
+- Mobile: 375px
+- Desktop: 1440px
+
+- Weights: 500, 700
+- Weights: 700
+*/
